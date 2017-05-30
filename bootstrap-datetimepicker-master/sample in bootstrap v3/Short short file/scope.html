@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		
+		var b  = "Hi";
+		var c  = "Bye-bye";
+
+		function func1() {
+			document.getElementById('loc').innerHTML = a;	
+		}
+
+		function func2() {
+			var a  ="hello";
+			document.getElementById('loc').innerHTML = b;	
+		}
+
+		function func3() {
+			document.getElementById('loc').innerHTML = c;
+		}
+
+	</script>
+	<title>Scope for a variable </title>
+</head>
+<body>
+
+<button id="func1" onclick="func1()"></button>
+<button id="func2" onclick="func2()"></button>
+<button id="func3" onclick="func3()"></button>
+
+<p id="loc"></p>
+</body>
+</html>

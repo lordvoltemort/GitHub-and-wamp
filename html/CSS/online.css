@@ -1,0 +1,56 @@
+body{
+	background-image: fixed;
+	padding-bottom: : 400px;
+	background-color: lightgrey;
+}
+
+.Header ol {
+	font-size: 20px;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgrey;
+}
+
+.HeaderOl li {
+	float: right;
+    background-color: grey;
+    
+}
+
+.HeaderOl li a
+{
+	display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration:none;
+    font-family: cursive;
+}
+
+
+.footer-left{
+	font-size: 20px;
+	display: block;
+	padding-top: 50px;
+	padding-left: 50px;
+	word-spacing: 10px;
+	text-align: left;
+	text-decoration-style: cursive;
+
+}
+
+.footer-left a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-right{
+	text-align: right;
+	padding-right: 35px;
+
+}
+.footer-distributer{
+	background-color: black;
+}

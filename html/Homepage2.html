@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="HomePage.css">
+	<script type="text/javascript" src= "HomePage.js"></script>
+	<title>Bike on rent.</title>
+</head>
+<body>
+<form action="index.php" method="post">
+	<div class="homepage">
+		<label id="book_label">Start</label>  
+		<input type="date" name="Start_trip" id="cal1" >
+		<input type="text" onclick="javascript:NewCssCal ('demo7','ddMMMyyyy','dropdown',true,'24','','future')">
+
+		<input type="time" name="time1"  onprogress="func1()"><br><br>
+		<label id="book_label">End</label>  <input type="date" name="end_trip" id="cal2"><input type="time" name="time1"><br><br>
+		<input type="submit" >
+	</div>
+</form>
+	<p id="temp">
+		
+	</p>
+
+</body>
+</html>

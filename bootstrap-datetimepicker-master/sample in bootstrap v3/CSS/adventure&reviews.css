@@ -1,0 +1,16 @@
+.adventureAndreviews{
+	width: 100%;
+    overflow:auto;
+}
+.left{
+	 float:left; 
+    width: 40%;
+	height: 600px;
+	background-color: lightgreen;
+}
+.right{
+	float: right;	
+    height: 600px;
+    width: 60%;
+    background-color: lightblue;    
+}

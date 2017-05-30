@@ -1,0 +1,25 @@
+.homepage{
+	font-size: 20px;
+	border-radius: 5px 0 0 5px;
+	padding-left: 200px;
+	padding-top: 30px;
+}
+
+#book_label{
+	width: 100px;
+	border-radius: 3px 3px 3px 3px;
+	background-color: grey;
+	padding: 10px;
+}
+#Avablitybtn{
+	border-width: 10px;
+}
+
+#cal1{
+	font-size: 20px;
+	width: 500px;
+}
+#cal2{
+	font-size: 20px;
+	width: 500px;
+}

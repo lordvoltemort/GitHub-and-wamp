@@ -1,0 +1,13 @@
+.display-left {
+	border: 40px;
+	border-radius: 20px 0 0 20px;	
+}
+
+.display-right {
+
+}
+
+body{
+	background-image: url(batman_3_the_dark_knight_rises-wide.jpg);
+	/*background-position: 100px;*/
+}
