@@ -22,7 +22,9 @@
 
 //function was create to display images
 /*Start */	
+/*In this function image of availabe bike as booked bike will display and 
 
+*/
 		function displayimage(){
 		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");
 		mysqli_select_db($con,"testing");

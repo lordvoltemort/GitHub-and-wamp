@@ -24,37 +24,49 @@ else
 	<form action="Homepage.php" method="post">
 		<p style="float: right; margin-top: 1px;"> <?php //echo "$firstname  $surname" ?></p>
 		<span style="float: right; padding-top: 30px; margin-top: 1px;">
-			<input type="submit" name="logout" value="logout" style=" float: right; width: 100px; height: 30px; ">	
+
 		</span>
 	</form>
 	</div>
 
+  <script type="text/javascript">
+        function checkDate(){   
+        var startDate = (document.getElementById('startDate').value != "");
+        var endDate = (document.getElementById('endDate').value != "");
+        if(!startDate && !endDate){
+            alert('Please provide date and time');
+            return false;
+        }
+        return true;
+}       
+    </script>
 
 
 <!-- Start of date and time box-->
 <div class="DateAndTime">
     <div class="container">
-        <form action="BookingPage.php" class="form-horizontal"  role="form">
+        <form onsubmit="return checkDate()" method="get" action="BookingPage.php" class="form-horizontal"  role="form">
             <fieldset>
                 <div class="form-group">
                     <label for="dtp_input1" class="col-md-2 control-label">Start Date and time</label>
                     <div class="input-group date form_datetime col-md-5" data-date="2017-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" >
-                        <input class="form-control" name="Start_trip" size="16" type="text" value="" readonly >
+                        <input class="form-control" name="Start_trip" size="16" id="startDate" type="text" value="" readonly >
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
     					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
     				<input type="hidden" id="dtp_input1" value="" /><br/>
                 </div>
-            
+ 
                 <div class="form-group">
                     <label for="dtp_input1" class="col-md-2 control-label">End Date and time</label>
                     <div class="input-group date form_datetime col-md-5" data-date="2017-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                        <input class="form-control" name="end_trip" size="16" type="text" value="" readonly>
+                        <input class="form-control" name="end_trip" id="endDate" size="16" type="text" value="" readonly>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
                     <input type="hidden" id="dtp_input1" value="" /><br/>
                 </div>
+            
             </fieldset>
              <input type="submit" value="search" >
             

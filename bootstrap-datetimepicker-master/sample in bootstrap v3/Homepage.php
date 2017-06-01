@@ -112,17 +112,26 @@
 
 </form>
 <!-- end of search-->
-
+    <script type="text/javascript">
+        function checkDate(){   
+        var form_valid = (document.getElementById('startDate').value != "");
+        if(!form_valid){
+            alert('Given data is incorrect');
+            return false;
+        }
+        return true;
+}       
+    </script>
 
 <!-- Start of date and time box-->
 <div class="DateAndTime">
     <div class="container">
-        <form action="BookingPage.php" class="form-horizontal"  role="form">
+        <form onsubmit="return checkDate()" method="get" action="BookingPage.php" class="form-horizontal"  role="form">
             <fieldset>
                 <div class="form-group">
                     <label for="dtp_input1" class="col-md-2 control-label">Start Date and time</label>
                     <div class="input-group date form_datetime col-md-5" data-date="2017-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" >
-                        <input class="form-control" name="Start_trip" size="16" type="text" value="" readonly >
+                        <input class="form-control" name="Start_trip" id="startDate" size="16" type="text" value="" >
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
     					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
                     </div>
