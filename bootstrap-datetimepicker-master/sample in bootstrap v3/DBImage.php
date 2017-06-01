@@ -7,12 +7,12 @@
 <body>
 <script >
 
-	function myFunction() {
-	//console.log('event',event.target.getAttribute("image_id"));
-	
+	function myFunction(intvalue) {
+//	console.log('event',event.target.getAttribute("image_id"));
+//	document.write(x);
+	alert(intvalue);
 }
 </script>
-
 
 <form method="post" enctype="multipart/form-data"><br>
 	<input type="file" name="image" /><br><br>
@@ -24,7 +24,7 @@
 
 <?php
 
-	$GLOBALS['items'] = array();
+//	$GLOBALS['items'] = array();
 	$GLOBALS['getId'] = array();
 	$GLOBALS['i'] = 0;
 
@@ -71,33 +71,34 @@
 		
 		
 		while ($row = mysqli_fetch_array($result)) {
-			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row[2]. ' "  >';
-			//$GLOBALS['image_id'] = $row['image_id'];
-			$items[$i] = $row['image_id'];
 			echo "<form method = 'POST' action = '' >";
-			echo ' <input type ="submit" name = "getId[$i]" value = "Click to book"> ';
+			$s = '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row[2]. ' " ';
+			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row[2]. ' "  >';
+			$GLOBALS['image_id'] = $row['image_id'];
+			$s = $s +'id = ' + $row['image_id'] +' >';
+//			echo $s;
+			//@$items[$i] = $row['image_id'];
+			echo '<br> <input type ="submit" name = "getId" value = "Click to book" onclick = " myFunction(' . $s . ')">  ';
 			echo "</form>";
-			$i++;
+			@$i++;
 			//displayImageId($image_id);
 		}
 	
-	if (isset($_POST['getId[$i]'])) {
+	if (isset($_POST['getId'])) {
 		
-		displayImageId($items[$i]);
+		//echo $getId[4];
+		echo "Done";
+		//echo $image_id;
+		//displayImageId($items);
 		
 	}
 
-	function displayImageId($array)
+	function displayImageId($items)
 	{
-		echo $items[$i];
+		echo $items[4];
 
 	}
 
 		mysqli_close($con);
 	}
-	
-
-
 ?>
-
-
