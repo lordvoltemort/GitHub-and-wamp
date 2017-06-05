@@ -1,6 +1,7 @@
 <?php
 	ini_set('mysql.connect_timeout', 300);
 	ini_set('default_sockey_timeout',300);
+	require 'core.inc.php';
 ?>
 
 <html>
@@ -11,6 +12,7 @@
 //	console.log('event',event.target.getAttribute("image_id"));
 //	document.write(x);
 	alert(intvalue);
+	console.log(intvalue);
 }
 </script>
 
@@ -60,45 +62,36 @@
 
 	}
 
-	displayimage();
+	
+
+if (loggedin()) {
+		displayimage();
+	}else{
+		echo "Please login ";
+	}
 
 		function displayimage(){
 		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");
 		mysqli_select_db($con,"testing");
-		$qry = "select * from images ";
+		$qry = "SELECT * FROM bikes JOIN images ;";
 		$result = mysqli_query($con,$qry);
  		
 		
 		
 		while ($row = mysqli_fetch_array($result)) {
 			echo "<form method = 'POST' action = '' >";
-			$s = '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row[2]. ' " ';
-			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row[2]. ' "  >';
+			$s = '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row['image']. ' " ';
+			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row['image']. ' "  >';
 			$GLOBALS['image_id'] = $row['image_id'];
 			$s = $s +'id = ' + $row['image_id'] +' >';
 //			echo $s;
 			//@$items[$i] = $row['image_id'];
-			echo '<br> <input type ="submit" name = "getId" value = "Click to book" onclick = " myFunction(' . $s . ')">  ';
+			echo '<br> <input type ="button" name = "getId" value = "Click to book" onclick = " myFunction(' . $s . ')">  ';
 			echo "</form>";
-			@$i++;
+			//@$i++;
 			//displayImageId($image_id);
 		}
-	
-	if (isset($_POST['getId'])) {
-		
-		//echo $getId[4];
-		echo "Done";
-		//echo $image_id;
-		//displayImageId($items);
-		
-	}
-
-	function displayImageId($items)
-	{
-		echo $items[4];
-
-	}
-
 		mysqli_close($con);
+		
 	}
 ?>

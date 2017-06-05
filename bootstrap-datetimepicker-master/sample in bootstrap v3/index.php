@@ -13,7 +13,8 @@ if(loggedin())
 	$surname = getuserfield('surname');
 	echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/>';
 	echo '<a href="logout.php"><button>Logout</button></a>';
-
+     header("Location: BookingPage.php");
+/*
     echo "<div>";
             echo '<img id="imgBanner" src="" alt="" />';
     echo "</div>";
@@ -21,7 +22,7 @@ if(loggedin())
 echo "   <!-- Start of date and time box -->";
 echo '<div class="DateAndTime">';
     echo '<div class="container">';
-        echo '<form onsubmit="return checkDate()" method="get" action="DBImage.php" class="form-horizontal"  role="form">';
+        echo '<form onsubmit="return checkDate()" method="get" action="loginform.inc.php" class="form-horizontal"  role="form">';
             echo '<fieldset>';
                 echo '<div class="form-group">';
                     echo '<label for="dtp_input1" class="col-md-2 control-label">Start Date and time</label>';
@@ -52,7 +53,7 @@ echo '</div>';
     
 echo "<!-- End of date and time-->";
 
-
+*/
     
 }
 else
