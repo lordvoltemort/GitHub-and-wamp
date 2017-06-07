@@ -115,7 +115,7 @@
 		//echo ("<br> end date is ".$enddate ."<br>");
 		$con =  mysqli_connect("localhost","Rahul","Koqa313*@3");
 		mysqli_select_db($con,"testing");
-		echo $sql = " UPDATE bikes SET user_id = '6002' ,start_date = '{$resultstart->format('Y-m-d H:i:s')}' , end_date='{$resultend->format('Y-m-d H:i:s')}'  WHERE bike_id= '$x' ";
+		echo $sql = " UPDATE bikes SET user_id = '$userid' ,start_date = '{$resultstart->format('Y-m-d H:i:s')}' , end_date='{$resultend->format('Y-m-d H:i:s')}'  WHERE bike_id= '$x' ";
 		
 	}
 ?>
