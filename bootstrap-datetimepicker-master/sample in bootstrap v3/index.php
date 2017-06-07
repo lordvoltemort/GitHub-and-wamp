@@ -13,8 +13,8 @@ if(loggedin())
 	$surname = getuserfield('surname');
 	echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/>';
 	echo '<a href="logout.php"><button>Logout</button></a>';
-     header("Location: BookingPage.php");
-/*
+//     header("Location: BookingPage.php");
+
     echo "<div>";
             echo '<img id="imgBanner" src="" alt="" />';
     echo "</div>";
@@ -53,7 +53,7 @@ echo '</div>';
     
 echo "<!-- End of date and time-->";
 
-*/
+
     
 }
 else

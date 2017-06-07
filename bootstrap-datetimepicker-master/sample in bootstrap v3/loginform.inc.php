@@ -135,7 +135,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
         <a href="#" style="display: inline-block; color: white;">Feedback</a>
         <a href="#" style="display: inline-block; color: white;">Refer_and_earn</a>
         <a href="register.php" style="display: inline-block; color: white;" >SignUp</a>
-
+        <a href="logout.php" style="display: inline-block; color: white;">Logout</a>
         <button onclick="document.getElementById('id01').style.display='block' " class="w3-button w3-black w3-large" style="float:right">Login</button>
         </div>
   </div>
@@ -186,7 +186,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
             <fieldset>
                 <div class="form-group">
                     <label for="dtp_input1" class="col-md-2 control-label">Start Date and time</label>
-                    <div class="input-group date form_datetime col-md-5" data-date="2017-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1" >
+                    <div class="input-group date form_datetime col-md-5" data-date="2017-09-16 05:25:07Z" data-date-format="dd MM yyyy  HH:ii p" data-link-field="dtp_input1" >
                         <input class="form-control" name="Start_trip" id="startDate" size="16" type="text" value="" >
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
     					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -518,5 +518,6 @@ if(isset($_POST['username']) && isset($_POST['password']))
 </div>
 <!-- end of footer-->
 
+<a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/loginform.inc.php&digit=style/plain/18/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
 </body>
 </html>	
