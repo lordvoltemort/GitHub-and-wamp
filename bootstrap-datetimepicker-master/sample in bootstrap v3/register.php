@@ -36,7 +36,7 @@ if(!loggedin())
 					}
 					else
 					{
-						echo $query = "INSERT INTO users VALUES (NULL,'".mysqli_real_escape_string($mysql_connect, $username)."','".mysqli_real_escape_string($mysql_connect, $password_hash)."','".mysqli_real_escape_string($mysql_connect, $firstname)."','".mysqli_real_escape_string($mysql_connect, $surname)."')";
+						$query = "INSERT INTO users VALUES (NULL,'".mysqli_real_escape_string($mysql_connect, $username)."','".mysqli_real_escape_string($mysql_connect, $password_hash)."','".mysqli_real_escape_string($mysql_connect, $firstname)."','".mysqli_real_escape_string($mysql_connect, $surname)."')";
 						if($query_run = mysqli_query($mysql_connect, $query))
 						{
 							header('Location: register_success.php');

@@ -21,26 +21,6 @@
 </html>
 
 <?php
-
-//	$GLOBALS['items'] = array();
-//	$GLOBALS['getId'] = array();
-//	$GLOBALS['i'] = 0;
-
-	if (isset($_POST['submit'])) {
-		if (getimagesize($_FILES['image']['tmp_name'])== FALSE) {
-			echo "Please select an image";
-		}
-		else{
-			$image = addslashes($_FILES['image']['tmp_name']);
-			$name =addslashes($_FILES['image']['name']);
-			$image = file_get_contents($image);
-			$image = base64_encode($image);
-			saveimage($name,$image);
-
-		}
-	}
-	
-
 	
 /*
 if (loggedin()) {

@@ -8,10 +8,10 @@
  **************************************************************************************************************/
 	function myFunction(intvalue) {
 		var val = intvalue;
-		//alert(val);
 		console.log("val is : " ,intvalue);
-		var x = "<?php FunctionName($phpvar='"+val+"',$startdate = "",$enddate = "");?>";
-		console.log("Check : " , x);
+		var x = "<?php functionName('"+val+"', '$startdate','$enddate',1234);  ?>";
+		var x = "";
+		console.log("Check : ",x);
 		
 }
 </script>
@@ -21,18 +21,16 @@
 <?php
 	require 'core.inc.php';
 	require 'connect.inc.php';
-	$startdate = $_REQUEST['Start_trip'];
-	$enddate = $_REQUEST['end_trip'];
+	$userid = getuserfield('user_id');	
+
 	//$enddate = "$startdate"
 //	$enddate="14 September 2017  09:30 am";
-	$result = DateTime::createFromFormat('d M Y - h:i A', $startdate);
-	echo $result->format('Y-m-d H:i:s');
+//	$result = DateTime::createFromFormat('d M Y - h:i A', $startdate);
+//	echo $result->format('Y-m-d H:i:s');
 //	$s = "14 September 2017  09:30 am";
 //	$enddate="20/04/2017 12:30 AM";
 //	$date = strtotime($s);
 //	echo date('Y-m-d:H:i:s', $date);
-	//echo ("<br><br><br>start date is ".$startdate);
-	echo ("<br> end date is ".$enddate ."<br>");	
 
 /**************************************************************************************************************** 
  *                                                                                                              * 
@@ -44,7 +42,7 @@
  ****************************************************************************************************************/
 	if(loggedin())
 	{
-		$GLOBALS['userid'] = getuserfield('user_id');	
+			
 		$GLOBALS['firstname'] = getuserfield('username');
 		$GLOBALS['surname'] = getuserfield('surname');
 		echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/> userid is '. $userid;
@@ -55,8 +53,9 @@
 
 	}
 	else{
-		echo "Please login first for booking...";
-		displayImageWithButton();
+		echo "Please login first for booking... To proceed forward.";
+		echo "";
+		displayImageWithButton();		
 		displayImageWithoutButton();
 
 	}
@@ -102,20 +101,23 @@
 		mysqli_close($con);
 	}
 
-	function FunctionName($x,$startdate,$enddate)
-	{
-		echo "Bike id is : $x";
+/***************************************************************************************************************
+ * this function is used to update the bikes table when user is valid and book a bike 
+****************************************************************************************************************/
+echo "User id of that person is : ".$userid;
+	function functionName($x,$startdate,$enddate,$user_id )
+	{	
+		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");
+		mysqli_select_db($con,"testing");
+//		echo "Bike id is : $x";
 		$startdate = $_REQUEST['Start_trip'];
 		$enddate = $_REQUEST['end_trip'];
-		$resultstart = DateTime::createFromFormat('d M Y - h:i A', $startdate);
-		echo $resultstart->format('Y-m-d H:i:s');
-		//echo ("<br><br><br>start date is ".$startdate);
+//		$startdate =  "16 September 2017 05:25 am";
+		$resultstart = DateTime::createFromFormat('d M Y  h:i A', $startdate);
+		$start = $resultstart->format('Y-m-d H:i:s');
 		$resultend = DateTime::createFromFormat('d M Y - h:i A', $enddate);
-		echo $resultend->format('Y-m-d H:i:s');
-		//echo ("<br> end date is ".$enddate ."<br>");
-		$con =  mysqli_connect("localhost","Rahul","Koqa313*@3");
-		mysqli_select_db($con,"testing");
-		echo $sql = " UPDATE bikes SET user_id = '$userid' ,start_date = '{$resultstart->format('Y-m-d H:i:s')}' , end_date='{$resultend->format('Y-m-d H:i:s')}'  WHERE bike_id= '$x' ";
+		$end = $resultend->format('Y-m-d H:i:s');
+		echo $sql = " UPDATE bikes SET user_id = '$user_id' ,start_date = '$start',end_date='$end'  WHERE bike_id= '$x' ";
 		
 	}
 ?>
