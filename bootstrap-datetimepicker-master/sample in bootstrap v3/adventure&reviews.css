@@ -4,13 +4,13 @@
 }
 .left{
 	 float:left; 
-    width: 20%;
+    width: 10%;
 	height: 600px;
-	background-color: lightgreen;
+	background-color: white;
 }
 .right{
 	float: right;	
     height: 600px;
-    width: 80%;
-    background-color: lightblue;    
+    width: 90%;
+    background-color:white;    
 }

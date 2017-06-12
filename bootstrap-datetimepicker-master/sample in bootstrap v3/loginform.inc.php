@@ -521,35 +521,88 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	    </div>
 	    
 	    <div class="right">
-        
-                <form method="post" action="index.php">
-                    <p><b>Leave a Reply ...</b></p>
-                    <textarea rows="4" cols="50" name="comment" name="comment">
-        			Enter text here...</textarea><br><br>
-                    <input type="name" name="name">Name (required)<br><br>
-                    <input type="email" name="email">Email (will not be published) (required)<br><br>
-                    <input type="submit" value="submit comment" name="submitQuery">
-                </form>
-                <?php 
+            <!--container-->
+
+            <div class="container">
+
+
+            <!--Wrap-->
+            <div id="wrapReview">
+            <div id="main">
+            <div class="row">
+            <div class="col-md-5">
+            <h3 class="headingReview">Comments and Responses</h3>
+            </div>
+            <div class="col-md-7">
+            <div id="upper_blank"></div>
+            </div>
+            </div>
+            </div>
+
+            <p id="pReview">Your email address will not be published. Required fields are marked *</p>
+
+            <!--Form Start-->
+
+            <div id='form'>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="" method="post" id="commentform" action="index.php">
+                        <div id="comment-name" class="form-row">
+                            <input type = "text" placeholder = "Name (required)" name = "name"  id = "nameReview" >
+                        </div>
+                        <div id="comment-email" class="form-row">
+                            <input type = "text" placeholder = "Mail (will not be published) (required)" name = "email"  id = "emailReview">
+                        </div>
+                        <div id="comment-message" class="form-row">
+                            <textarea name = "comment" placeholder = "Message" id = "commentReview" ></textarea>
+                        </div>
+                        <input type="submit" name="dsubmit" id="commentSubmit" value="Submit Comment">
+                        <input style="width: 30px" type="checkbox" value="1" name="subscribe" id="subscribe" checked="checked">
+                        <p1><b>Notify me when new comments are added.</b></p1>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!--Reply Section-->
+            <div id="second">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h3 class="second_heading"><b>Leave a Reply</b></h3>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="blankReview"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="middle">
+            <?php 
                     $con=mysqli_connect("localhost","Rahul","Koqa313*@3","testing");
-    // Check connection
-    if (mysqli_connect_errno())
-      {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-      }
+                        // Check connection
+                        if (mysqli_connect_errno())
+                          {
+                          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                          }
 
-    $result = mysqli_query($con,"SELECT * FROM commentsection");
+                        $result = mysqli_query($con,"SELECT * FROM commentsection");
 
-   echo "<table>";
- while($row = mysqli_fetch_array($result))
-      {
-//          echo "<tr> <td> " . $row['name'] . " </td><td> comment" . $row['comment'] . " </td> </tr>"; //these are the fields that you have stored in your database table employee
-        echo $row['name'];
-        echo $row['comment']."<br>";
-      }
- echo "</table>";
-    mysqli_close($con);
+                        echo "<table>";
+                        while($row = mysqli_fetch_array($result))
+                              {
+                        //          echo "<tr> <td> " . $row['name'] . " </td><td> comment" . $row['comment'] . " </td> </tr>"; //these are the fields that you have stored in your database table employee
+                                echo "Name : " . $row['name']." ";
+                                echo "Comment :" . $row['comment']." <br>";
+                              }
+                         echo "</table>";
+                        mysqli_close($con);
                  ?>
+            <form>
+                <input type = "button" value = "reply" name = "dreply" id = "inner_reply">
+            </form>
+            </div>
+
+            </div>
 	    </div>
 	</div>
 	<!-- end of suggested adventure and reviews -->
