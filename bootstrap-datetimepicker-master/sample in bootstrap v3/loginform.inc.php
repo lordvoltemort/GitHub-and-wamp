@@ -30,11 +30,20 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	{
 		echo 'You must enter a username and password.';
 	}
+	if(loggedin())
+	{
+			
+		$GLOBALS['firstname'] = getuserfield('username');
+		$GLOBALS['surname'] = getuserfield('surname');
+//		echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/> userid is '. $userid;
+//		echo '<a href="logout.php">Log Out</a>';
+	}
 }
 ?>
 <html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
@@ -165,7 +174,7 @@ $(document).ready(function(){
 <body >
 
 <!--Start of Hover offer div class  -->
-<div id="mySidenav" class="sidenav">
+<div id="mySideHovernav" class="sidenav">
       <a href="#" id="about">About</a>
       <a href="#" id="blog">Blog</a>
       <a href="#" id="projects">Projects</a>
@@ -522,6 +531,46 @@ $(document).ready(function(){
 	    <iframe src="DBImage.php" width="400px;" height="400px;">
 	    	
 	    </iframe>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-like" data-href="https://www.facebook.com/Royal-home-decor-furniture-1242106739220553/" data-width="200" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
+
+<div id="mySidenav" class="sidenav">
+
+<div class="wrapClassForAdventure">
+    <!--Updated on 10/8/2016; fixed center alignment percentage-->
+    <div class="fleft">
+    	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#" onclick="ChangeAventureImage1()">Shillong</a>
+		  <a href="#" onclick="ChangeAventureImage2()">Guwahati</a>
+		  <a href="#" onclick="ChangeAventureImage4()">Taiwan</a>
+		  <a href="#" onclick="ChangeAventureImage3()">Kaziranga</a>
+    </div>
+    
+    <div class="fright">
+    <img src="guwahati.jpg" id="ChangeAdventureImage" >
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRoyal-home-decor-furniture-1242106739220553%2F&width=200&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="200" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+</div>
+  
+</div>
+
+<h2>Place you can visit</h2>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<script type="text/javascript" src= "adventure.js"></script>
+
+
 	        
 	    </div>
 	    
@@ -624,6 +673,7 @@ $(document).ready(function(){
         <div class="text-center center-block">
             <p class="txt-railway" id="txt-railway"><center><b> Connect with us on </b></center></p>
             <br />
+            <span>Total visited :</span>
             <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/loginform.inc.php&digit=style/plain/18/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
 
                 <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
@@ -651,14 +701,14 @@ $(document).ready(function(){
         {
             //$qry = "INSERT INTO commentsection (comment ,name, email ) VALUES ( '$comment' , '$name', '$title')";
             $query = "INSERT INTO commentsection VALUES ('".mysqli_real_escape_string($mysql_connect,$name )."','".mysqli_real_escape_string($mysql_connect,$email )."','".mysqli_real_escape_string($mysql_connect, $comment)."')";
-                        if($query_run = mysqli_query($mysql_connect, $query))
-                        {
-                            header('Location: index.php');
-                        }
-                        else
-                        {
-                            echo 'Sorry, we couldn\'t register you at this time. Try again later.';
-                        }
+            if($query_run = mysqli_query($mysql_connect, $query))
+            {
+                header('Location: index.php');
+            }
+            else
+            {
+                echo 'Sorry, we couldn\'t register you at this time. Try again later.';
+            }
         }
     }        
 ?>

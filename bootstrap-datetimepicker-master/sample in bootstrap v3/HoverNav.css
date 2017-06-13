@@ -1,4 +1,4 @@
-#mySidenav a{
+#mySideHovernav a{
 	position: fixed;
 	right:   -110px;
 	padding: 15px;
@@ -10,9 +10,8 @@
 	border-radius: 5px 0 0 5px;
 }
 
-#mySidenav a:hover{
+#mySideHovernav a:hover{
 	right: 0px;
-
 }
 
 #about {
