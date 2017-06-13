@@ -58,9 +58,13 @@ if(!loggedin())
 
 <form action="register.php" method="POST">
 	Username: <br/><input type="text" name="username" maxlength="30" value="<?php if(isset($username)) { echo $username; } ?>"><br/><br/>
+
 	Password: <br/><input type="password" name="password" maxlength="30"><br/><br/>
+
 	Confirm Password: <br/><input type="password" name="password_confirm" maxlength="30"><br/><br/>
+
 	First Name:<br/><input type="text" name="firstname" maxlength="30" value="<?php if(isset($firstname)) { echo $firstname; } ?>"><br/><br/>
+	
 	Lastname:<br/><input type="text" name="surname" maxlength="30" value="<?php if(isset($surname)) { echo $surname; } ?>"><br/><br/>
 	<input type="submit" value="Register">
 </form>

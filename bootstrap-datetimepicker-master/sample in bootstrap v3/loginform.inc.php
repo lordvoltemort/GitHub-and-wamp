@@ -30,20 +30,15 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	{
 		echo 'You must enter a username and password.';
 	}
-	if(loggedin())
-	{
-			
-		$GLOBALS['firstname'] = getuserfield('username');
-		$GLOBALS['surname'] = getuserfield('surname');
-//		echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/> userid is '. $userid;
-//		echo '<a href="logout.php">Log Out</a>';
-	}
 }
 ?>
+
+
+
 <html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
-	
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
@@ -224,9 +219,9 @@ $(document).ready(function(){
 <div class="DateAndTime">
     <div class="container">
         <form onsubmit="return checkDate()" method="get" action="BookingPage.php" class="form-horizontal"  role="form">
-            <fieldset>
+            
                 <div class="form-group">
-                    <label for="dtp_input1" class="col-md-2 control-label">Start Date and time</label>
+                    <label for="dtp_input1" class="col-md-2 control-label">Start date and time</label>
                     <div class="input-group date form_datetime col-md-5" data-date="2017-09-16 05:25:07Z" data-date-format="dd MM yyyy  HH:ii p" data-link-field="dtp_input1" >
                         <input class="form-control" name="Start_trip" id="startDate" size="16" type="text" value="" >
                         <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
@@ -244,8 +239,7 @@ $(document).ready(function(){
                     </div>
                     <input type="hidden" id="dtp_input1" value="" /><br/>
                 </div>
-            </fieldset>
-             <input type="submit" value="search" >
+                <input type="submit" value="search" >
             
         </form>
     </div>
