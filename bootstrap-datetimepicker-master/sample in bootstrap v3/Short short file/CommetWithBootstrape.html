@@ -79,26 +79,3 @@
 </body>
 </html>
 
-
-
-
-<?php 
-                    $con=mysqli_connect("localhost","Rahul","Koqa313*@3","testing");
-                        // Check connection
-                        if (mysqli_connect_errno())
-                          {
-                          echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                          }
-
-                        $result = mysqli_query($con,"SELECT * FROM commentsection");
-
-                        echo "<table>";
-                        while($row = mysqli_fetch_array($result))
-                              {
-                        //          echo "<tr> <td> " . $row['name'] . " </td><td> comment" . $row['comment'] . " </td> </tr>"; //these are the fields that you have stored in your database table employee
-                                echo "Name : " . $row['name']." ";
-                                echo "Comment :" . $row['comment']." <br>";
-                              }
-                         echo "</table>";
-                        mysqli_close($con);
-                 ?>

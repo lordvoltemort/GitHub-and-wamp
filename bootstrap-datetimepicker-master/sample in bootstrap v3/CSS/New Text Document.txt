@@ -1,0 +1,26 @@
+<!--css link for adventure button -->
+    <link rel="stylesheet" type="text/css" href="CSS\Adventure.css">    
+<!-- end of css link for adventure button-->
+
+<!-- css link for adventure and review whole section-->
+<link rel="stylesheet" type="text/css" href="adventure&reviews.css">
+<!--end of css link for adventure and reviews section-->
+
+
+<!--Homepage.css file link -->
+<link rel="stylesheet" type="text/css" href="CSS/Homepage.css">
+<!--end of Homepage.css file link -->
+
+<!-- Link for header file -->
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+<!--End of css file for header-->
+
+<!-- hover css link for offer-->
+	<link rel="stylesheet" type="text/css" href="HoverNav.css">
+<!-- end of hover -->
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+<link rel="stylesheet" type="text/css" href="CSS/footer.css">

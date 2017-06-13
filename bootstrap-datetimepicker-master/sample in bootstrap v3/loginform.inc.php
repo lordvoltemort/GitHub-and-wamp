@@ -32,7 +32,6 @@ if(isset($_POST['username']) && isset($_POST['password']))
 	}
 }
 ?>
-<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
@@ -42,7 +41,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
     <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
 <!--css link for adventure button -->
-    <link rel="stylesheet" type="text/css" href="C:\wamp\www\bootstrap-datetimepicker-master\sample in bootstrap v3\CSS\Adventure.css">    
+    <link rel="stylesheet" type="text/css" href="CSS\Adventure.css">    
 <!-- end of css link for adventure button-->
 <!-- css link for review section-->
 <link rel="stylesheet" type="text/css" href="CSS/CommentSection.css">
@@ -70,10 +69,14 @@ if(isset($_POST['username']) && isset($_POST['password']))
 <!--End of css file for footer-->
 
 <!-- hover css link for offer-->
-	<link rel="stylesheet" type="text/css" href="CSS/Hovernav.css">
+	<link rel="stylesheet" type="text/css" href="HoverNav.css">
 <!-- end of hover -->
 
+
     <style type="text/css">
+    	#panel{
+    		display: none;
+    	}
         #imgBanner{
             width: 1350px;
             height: 400px;
@@ -113,6 +116,16 @@ if(isset($_POST['username']) && isset($_POST['password']))
 }
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+
 <!--
 
     echo '<div class="navbar-header-">';
@@ -147,65 +160,57 @@ if(isset($_POST['username']) && isset($_POST['password']))
         </div>
   </div>
 
-  <style type="text/css">
-  	.navHoverOffer{
-  		margin-right: 20px;
-  	}
-  </style>
+  <link rel="stylesheet" type="text/css" href="CSS/w3.css">
 </head>
 <body >
 
+<!--Start of Hover offer div class  -->
+<div id="mySidenav" class="sidenav">
+      <a href="#" id="about">About</a>
+      <a href="#" id="blog">Blog</a>
+      <a href="#" id="projects">Projects</a>
+      <a href="#" id="contact">Contact</a>
+</div>
+<!-- End of hover offer class-->
+
 <!--Start of Loginform-->
     
-<link rel="stylesheet" type="text/css" href="CSS/w3.css">
+
 <div class="w3-container">
     <div id="id01" class="w3-modal">
         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width: 600px">
-        <div class="w3-center"><br>
-        <span onclick="document.getElementById('id01').style.display = 'none' " class="   w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-            <img src="flat_heros_02.png" alt="Avtar" style="width: 30%" class="w3-circle w3-margin-top">
-        </div>
-            <form class="w3-container" action="<?php echo $current_file; ?>" method="POST">
-                <div class="w3-section" >
-                <label><b>Username</b></label>
-                <input type="text" name="username" class="w3-input w3-border w3-margin-bottom" placeholder="Enter username" > 
-                <label><b>Password</b></label>
-              <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" >
-              
-              <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
-              <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
-                </div>
-            </form>
-                 <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
-                <span class="w3-right w3-padding w3-hide-small">Forgot<a href="#">Password?</a></span>
-                </div>
-
+            <div class="w3-center"><br>
+            <span onclick="document.getElementById('id01').style.display = 'none' " class="   w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                <img src="flat_heros_02.png" alt="Avtar" style="width: 30%" class="w3-circle w3-margin-top">
             </div>
+                <form class="w3-container" action="<?php echo $current_file; ?>" method="POST">
+                    <div class="w3-section" >
+                        <label><b>Username</b></label>
+                        <input type="text" name="username" class="w3-input w3-border w3-margin-bottom" placeholder="Enter username" > 
+                        <label><b>Password</b></label>
+                      <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="password" >
+                      
+                      <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+                      <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+                    </div>
+                </form>
+                     <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+                        <span class="w3-right w3-padding w3-hide-small">Forgot<a href="#">Password?</a></span>
+                    </div>
         </div>
     </div>
 </div>
+
 <!--End of loginform -->
 
 <!-- Here image will display automatically one by one-->
 <div>
 	<img id="imgBanner" src="" alt="" />
 </div>
-<<!-- Image diplay emd here-->
+<!-- Image diplay end here-->
 
-	<!--Start of Hover offer div class  -->
-<div id="mySidenav" class="sidenav">
-	  <a href="#" id="about">About</a>
-	  <a href="#" id="blog">Blog</a>
-	  <a href="#" id="projects">Projects</a>
-	  <a href="#" id="contact">Contact</a>
-	</div>
-<!-- End of hover offer class-->
-
-
-<div class="navHoverOffer">
-
-
+<div >
 <!-- Start of date and time box-->
 <div class="DateAndTime">
     <div class="container">
@@ -569,14 +574,14 @@ if(isset($_POST['username']) && isset($_POST['password']))
             <div id="second">
                 <div class="row">
                     <div class="col-md-2">
-                        <h3 class="second_heading"><b>Leave a Reply</b></h3>
-                    </div>
+                        <h3 class="second_heading" id="flip"><b>Leave a Reply</b></h3>
+                    </div>	
                     <div class="col-md-10">
                         <div class="blankReview"></div>
                     </div>
                 </div>
             </div>
-            <div id="middle">
+            <div id = 'panel' >
             <?php 
                     $con=mysqli_connect("localhost","Rahul","Koqa313*@3","testing");
                         // Check connection
@@ -586,27 +591,32 @@ if(isset($_POST['username']) && isset($_POST['password']))
                           }
 
                         $result = mysqli_query($con,"SELECT * FROM commentsection");
-
-                        echo "<table>";
+                        
+                        echo "<table >";
                         while($row = mysqli_fetch_array($result))
                               {
                         //          echo "<tr> <td> " . $row['name'] . " </td><td> comment" . $row['comment'] . " </td> </tr>"; //these are the fields that you have stored in your database table employee
-                                echo "Name : " . $row['name']." ";
-                                echo "Comment :" . $row['comment']." <br>";
+                                echo "<div id='middle'>";
+                                echo "";
+                                echo "<p style='color:red'>" . $row['name']." </p>";
+                                echo "" . $row['comment']." <br>";
+                                echo "<form>";
+                                echo "<input type = 'button' value = 'reply' name = 'dreply' id = 'inner_reply'>";
+                                echo "</form>";
+                                echo "</div>";
                               }
                          echo "</table>";
                         mysqli_close($con);
                  ?>
-            <form>
-                <input type = "button" value = "reply" name = "dreply" id = "inner_reply">
-            </form>
-            </div>
+            
+            	</div>
 
             </div>
 	    </div>
 	</div>
 	<!-- end of suggested adventure and reviews -->
 </div>	
+
 <!-- start of footer-->
 <div class="container-footer">
 <h3></h3>
@@ -614,6 +624,8 @@ if(isset($_POST['username']) && isset($_POST['password']))
         <div class="text-center center-block">
             <p class="txt-railway" id="txt-railway"><center><b> Connect with us on </b></center></p>
             <br />
+            <a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/loginform.inc.php&digit=style/plain/18/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
+
                 <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
               <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
               <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
@@ -623,8 +635,6 @@ if(isset($_POST['username']) && isset($_POST['password']))
 </div>
 
 <!-- end of footer-->
-
-<a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/loginform.inc.php&digit=style/plain/18/&reloads=0" alt="" title="" border="0"></a><br /><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
 </body>
 </html>	
 
@@ -643,7 +653,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
             $query = "INSERT INTO commentsection VALUES ('".mysqli_real_escape_string($mysql_connect,$name )."','".mysqli_real_escape_string($mysql_connect,$email )."','".mysqli_real_escape_string($mysql_connect, $comment)."')";
                         if($query_run = mysqli_query($mysql_connect, $query))
                         {
-                            header('Location: register_success.php');
+                            header('Location: index.php');
                         }
                         else
                         {

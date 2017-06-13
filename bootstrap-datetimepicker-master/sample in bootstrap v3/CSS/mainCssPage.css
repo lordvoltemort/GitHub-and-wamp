@@ -1,0 +1,1171 @@
+/*css for adventure and review*/
+
+.adventureAndreviews{
+	width: 100%;
+    overflow:auto;
+}
+.left{
+	 float:left; 
+    width: 20%;
+	height: 600px;
+	background-color: lightgreen;
+}
+.right{
+	float: right;	
+    height: 600px;
+    width: 80%;
+    background-color: lightblue;    
+}
+
+/*end of adventure and review*/
+
+/*start of adventures*/
+
+#ChangeAdventureImages {
+	width :95%;
+	height:50%;
+	border: 5px solid white; 
+	border-radius: 5px;
+}
+	
+.wrapClassForAdventure {
+    width: 100%;
+    overflow:auto;
+}
+
+.fleft {
+    float:left; 
+    width: 20%;
+	height: 600px;
+	background-color: black;
+}
+
+
+.fright {
+	float: right;	
+    height: 600px;
+    width: 78%;
+    background-color: black;    
+}
+
+/*body {
+    font-family: "Lato", sans-serif;
+    
+}
+*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:left;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*end of adventure*/
+
+/*start of comment section*/
+
+#wrapReview{
+border: 1px solid lightgray;
+alignment-adjust: central;
+width: 1000px;
+margin-left: 50px;
+margin-top: 10px;
+box-shadow: 0 5px 0 #e6e6e6;
+padding-bottom: 50px;
+
+}
+h1{
+color: blue-violet;
+text-align: center;
+}
+
+h3.headingReview{
+margin-left: 20px;
+background-color: #fafafa;
+font-size: 25px;
+float: left;
+padding-left: 40px;
+position: relative;
+width: 405px;
+height: 40px;
+padding-top: 5px;
+
+}
+#upper_blank{
+border-bottom: 7px solid steelblue;
+margin-top: 40px;
+margin-right: 485px;
+width: 570px;
+padding-right: 480px;
+}
+#pReview{
+margin-left: 5px;
+padding: 8px;
+padding-left: 20px;
+}
+#nameReview{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#emailReview{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#commentReview{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 650px;
+height: 200px;
+}
+#commentSubmit{
+margin-left: 20px;
+width: 250px;
+height: 30px;
+color: white;
+font-size: 20px;
+background-color: #2c95dc;
+box-shadow: 0 3px 0 #09466f;
+margin-bottom: 30px;
+padding-left: 20px;
+border-radius: 5px;
+}
+#commentSubmit:hover {
+background-color: #09466f;
+
+}
+
+p{
+font-size: 18px;
+color: gray;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+p1{
+font-size: 18px;
+padding-top: 20px;
+}
+
+h3.second_heading{
+margin-left: 0;
+margin-top: 30px;
+font-size: 20px;
+width: 250px;
+height: 50px;
+padding-top: 10px;
+padding-left: 55px;
+
+}
+#middle{
+border: 1px solid lightgray;
+width: 1000px;
+height: 200px;
+background-color: lightyellow;
+margin-left: 45px;
+text-align: left;
+margin-top: 10px;
+box-shadow: 0 2px 0 lightgray;
+}
+.blankReview{
+border-bottom: 7px solid steelblue;
+margin-top: 50px;
+margin-left: 50px;
+margin-right: 100px;
+width: 800px;
+}
+
+#inner_reply{
+
+margin-left: 800px;
+margin-top: 160px;
+width: 100px;
+height: 30px;
+background-color: #2c95dc;
+text-align: center;
+font-size: 18px;
+color: white;
+border-radius: 18px;
+}
+
+/*end of adventure */
+
+/*start of footer*/
+
+
+.container-footer{
+     font-size: 20px;
+     background-color: orange;
+     color: white;
+}
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+
+ /*end of footer*/
+
+ /*start of header */
+
+ #search{
+    padding-left: 50px;  
+}
+.navbar-header{
+  position: fixed;
+  margin: 5px;
+
+
+}
+.navbar-header-container  {
+
+  word-spacing: 10px;
+  font-size: 20px;
+  background-color: black;
+  padding: 10px;
+}
+
+.navbar-header a{
+  text-decoration: none;
+  font-style: arial;
+  color: white;
+
+}
+
+
+input[type=text]{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;`re3szwq1a2
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+a:hover:not(.active) {
+    background-color: grey;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.how_it_works{
+  color: white;
+  padding-bottom: 40px;
+  /*background-image: url(lightColor.jpeg);*/
+  font-size: 20px;
+}
+
+.how_it_works a{
+  text-decoration: none;
+}
+
+#btn-for-pickup{
+
+  padding: 20px;
+  word-spacing: 300px;
+
+  background-color: lightblue;
+}
+
+body{
+  background-image: url(Affordable-Bikes.jpg);
+  background-image: 100% 100%; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 1200px 700px;
+
+  display: block;
+
+}
+
+.blank{
+  padding-top: 40px;
+}
+
+.estimate{
+  padding-top: 500px;
+  background-color: transparent;
+}
+.DateAndTime{
+  
+  padding-top: 30px;
+  background-color: lightblue;
+}
+#searchBtn{
+  border-width: 6px;
+  width: 100%; 
+  height: 30px;
+  position:relative;
+  top:50%; 
+  left:50%;
+}
+
+/*end of headder*/
+
+/*start of homepage*/
+
+.homepage{
+	font-size: 20px;
+	border-radius: 5px 0 0 5px;
+	padding-left: 200px;
+	padding-top: 30px;
+}
+
+#book_label{
+	width: 100px;
+	border-radius: 3px 3px 3px 3px;
+	background-color: grey;
+	padding: 10px;
+}
+#Avablitybtn{
+	border-width: 10px;
+}
+
+#cal1{
+	font-size: 20px;
+	width: 500px;
+}
+#cal2{
+	font-size: 20px;
+	width: 500px;
+}
+
+.FAQ_Section{
+	background-color: grey;
+}
+
+/*end of homepage*/
+
+/*start of hover */
+
+#mySidenav a{
+	position: absolute;
+	right:   -110px;
+	padding: 15px;
+	transition: 0.3;
+	width: 100px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	border-radius: 5px 0 0 5px;
+}
+
+#mySidenav a:hover{
+	right: 0px;
+
+}
+
+#about {
+    top: 440px;
+    background-color: #4CAF50;
+}	
+
+#blog {
+    top: 380px;
+    background-color: #2196F3; 
+}
+
+
+#projects {
+    top: 320px;
+    background-color: #f44336; 
+}
+
+#contact {
+    top: 260px;
+    background-color: #555 
+}
+
+/* end of hover */
+
+/*start of image change */
+
+.display-left {
+	border: 40px;
+	border-radius: 20px 0 0 20px;	
+}
+
+.display-right {
+
+}
+
+body{
+	background-image: url(batman_3_the_dark_knight_rises-wide.jpg);
+	/*background-position: 100px;*/
+}
+
+/*end of image change*/
+
+/* start of modal */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: yellow;
+    color: black;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+
+/* end of modal */
+
+/* start of offer modal*/
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) 
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}*/
+
+/* end of offer modal*/
+
+/* start of online  */
+
+body{
+	background-image: fixed;
+	padding-bottom: : 400px;
+	background-color: lightgrey;
+}
+
+.Header ol {
+	font-size: 20px;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgrey;
+}
+
+.HeaderOl li {
+	float: right;
+    background-color: grey;
+    
+}
+
+.HeaderOl li a
+{
+	display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration:none;
+    font-family: cursive;
+}
+
+
+.footer-left{
+	font-size: 20px;
+	display: block;
+	padding-top: 50px;
+	padding-left: 50px;
+	word-spacing: 10px;
+	text-align: left;
+	text-decoration-style: cursive;
+
+}
+
+.footer-left a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-right{
+	text-align: right;
+	padding-right: 35px;
+
+}
+.footer-distributer{
+	background-color: black;
+}
+
+/* end of online */
+
+/* reset css start */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* reset css end*/
+
+/* style css start */
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  content: '';
+}
+
+body {
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #4e5359;
+  background-color: #f3f3f5;
+}
+body::after {
+  /* overlay layer visible on small devices when the right panel slides in */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 83, 89, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+body.cd-overlay::after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+@media only screen and (min-width: 768px) {
+  body::after {
+    display: none;
+  }
+}
+
+a {
+  color: #a9c056;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+header {
+  position: relative;
+  height: 100px;
+  line-height: 180px;
+  text-align: center;
+  background-color: #a9c056;
+}
+header h1 {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 240px;
+    line-height: 240px;
+  }
+  header h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+}
+
+.cd-faq {
+  width: 90%;
+  max-width: 1024px;
+  margin: 2em auto;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.cd-faq:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq {
+    position: relative;
+    margin: 4em auto;
+    box-shadow: none;
+  }
+}
+
+.cd-faq-categories a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 28px 0 16px;
+  background-color: #4e5359;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  white-space: nowrap;
+  border-bottom: 1px solid #555b61;
+  text-overflow: ellipsis;
+}
+.cd-faq-categories a::before, .cd-faq-categories a::after {
+  /* plus icon on the right */
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: inline-block;
+  height: 1px;
+  width: 10px;
+  background-color: #7f868e;
+}
+.cd-faq-categories a::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.cd-faq-categories li:last-child a {
+  border-bottom: none;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-categories {
+    width: 20%;
+    float: left;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+  .cd-faq-categories a {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding-left: 24px;
+    padding: 0 24px;
+    -webkit-transition: background 0.2s, padding 0.2s;
+    -moz-transition: background 0.2s, padding 0.2s;
+    transition: background 0.2s, padding 0.2s;
+  }
+  .cd-faq-categories a::before, .cd-faq-categories a::after {
+    display: none;
+  }
+  .no-touch .cd-faq-categories a:hover {
+    background: #555b61;
+  }
+  .no-js .cd-faq-categories {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-faq-categories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    z-index: 2;
+  }
+  .cd-faq-categories a::before {
+    /* decorative rectangle on the left visible for the selected item */
+    display: block;
+    top: 0;
+    right: auto;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #a9c056;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .cd-faq-categories .selected {
+    background: #42464b !important;
+  }
+  .cd-faq-categories .selected::before {
+    opacity: 1;
+  }
+  .cd-faq-categories.is-fixed {
+    /* top and left value assigned in jQuery */
+    position: fixed;
+  }
+  .no-js .cd-faq-categories {
+    position: relative;
+  }
+}
+
+.cd-faq-items {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 0 5% 1em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0) translateX(100%);
+  -moz-transform: translateZ(0) translateX(100%);
+  -ms-transform: translateZ(0) translateX(100%);
+  -o-transform: translateZ(0) translateX(100%);
+  transform: translateZ(0) translateX(100%);
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  transition: transform .3s;
+}
+.cd-faq-items.slide-in {
+  -webkit-transform: translateZ(0) translateX(0%);
+  -moz-transform: translateZ(0) translateX(0%);
+  -ms-transform: translateZ(0) translateX(0%);
+  -o-transform: translateZ(0) translateX(0%);
+  transform: translateZ(0) translateX(0%);
+}
+.no-js .cd-faq-items {
+  position: static;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-items {
+    position: static;
+    height: auto;
+    width: 78%;
+    float: right;
+    overflow: visible;
+    -webkit-transform: translateZ(0) translateX(0);
+    -moz-transform: translateZ(0) translateX(0);
+    -ms-transform: translateZ(0) translateX(0);
+    -o-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    padding: 0;
+    background: transparent;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-faq-items {
+    float: none;
+    width: 100%;
+    padding-left: 220px;
+  }
+  .no-js .cd-faq-items {
+    padding-left: 0;
+  }
+}
+
+.cd-close-panel {
+  position: fixed;
+  top: 5px;
+  right: -100%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: right 0.4s;
+  -moz-transition: right 0.4s;
+  transition: right 0.4s;
+}
+.cd-close-panel::before, .cd-close-panel::after {
+  /* close icon in CSS */
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  display: inline-block;
+  height: 3px;
+  width: 18px;
+  background: #6c7d8e;
+}
+.cd-close-panel::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cd-close-panel::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.cd-close-panel.move-left {
+  right: 2%;
+}
+@media only screen and (min-width: 768px) {
+  .cd-close-panel {
+    display: none;
+  }
+}
+
+.cd-faq-group {
+  /* hide group not selected */
+  display: none;
+}
+.cd-faq-group.selected {
+  display: block;
+}
+.cd-faq-group .cd-faq-title {
+  background: transparent;
+  box-shadow: none;
+  margin: 1em 0;
+}
+.no-touch .cd-faq-group .cd-faq-title:hover {
+  box-shadow: none;
+}
+.cd-faq-group .cd-faq-title h2 {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #bbbbc7;
+}
+.no-js .cd-faq-group {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-group {
+    /* all groups visible */
+    display: block;
+  }
+  .cd-faq-group > li {
+    background: #ffffff;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+  }
+  .no-touch .cd-faq-group > li:hover {
+    box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
+  }
+  .cd-faq-group .cd-faq-title {
+    margin: 2em 0 1em;
+  }
+  .cd-faq-group:first-child .cd-faq-title {
+    margin-top: 0;
+  }
+}
+
+.cd-faq-trigger {
+  position: relative;
+  display: block;
+  margin: 1.6em 0 .4em;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-trigger {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 24px 72px 24px 24px;
+  }
+  .cd-faq-trigger::before, .cd-faq-trigger::after {
+    /* arrow icon on the right */
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    height: 2px;
+    width: 13px;
+    background: #cfdca0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+  .cd-faq-trigger::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 32px;
+  }
+  .cd-faq-trigger::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .content-visible .cd-faq-trigger::before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .content-visible .cd-faq-trigger::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.cd-faq-content p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #6c7d8e;
+}
+@media only screen and (min-width: 768px) {
+  .cd-faq-content {
+    display: none;
+    padding: 0 24px 30px;
+  }
+  .cd-faq-content p {
+    line-height: 1.6;
+  }
+  .no-js .cd-faq-content {
+    display: block;
+  }
+}
+/*style css end*/

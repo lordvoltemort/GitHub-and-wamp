@@ -16,22 +16,22 @@
 }
 
 #about {
-    top: 40px;
+    top: 440px;
     background-color: #4CAF50;
 }	
 
 #blog {
-    top: 100px;
+    top: 380px;
     background-color: #2196F3; 
 }
 
 
 #projects {
-    top: 160px;
+    top: 320px;
     background-color: #f44336; 
 }
 
 #contact {
-    top: 220px;
+    top: 260px;
     background-color: #555 
 }
