@@ -75,7 +75,9 @@ if(isset($_POST['username']) && isset($_POST['password']))
 <!-- hover css link for offer-->
 	<link rel="stylesheet" type="text/css" href="HoverNav.css">
 <!-- end of hover -->
-
+<!-- start of sign up css-->
+	<link rel="stylesheet" type="text/css" href="SignUpModal.css">
+<!-- end of sign up css-->
 
     <style type="text/css">
     	#panel{
@@ -158,15 +160,60 @@ $(document).ready(function(){
         <a href="#" style="display: inline-block; color: white;">About</a>
         <a href="#" style="display: inline-block; color: white;">Feedback</a>
         <a href="#" style="display: inline-block; color: white;">Refer_and_earn</a>
-        <a href="register.php" style="display: inline-block; color: white;" >SignUp</a>
+        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+<!--        <a href="register.php" style="display: inline-block; color: white;" >SignUp</a> -->
         <a href="logout.php" style="display: inline-block; color: white;">Logout</a>
-        <button onclick="document.getElementById('id01').style.display='block' " class="w3-button w3-black w3-large" style="float:right">Login</button>
+        <a href ="#" onclick="document.getElementById('id01').style.display='block' " class="w3-button w3-black w3-large" style="float:right">Login</a>
         </div>
   </div>
 
   <link rel="stylesheet" type="text/css" href="CSS/w3.css">
 </head>
 <body >
+
+<!-- start of sign up-->
+<div id="id02" class="modalSignUp">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-contentSignUp animate" action="SignUpModal.php" method="POST">
+    <div class="containerSignUp">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required value="<?php if(isset($email)) { echo $email; } ?>">
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="password_confirm" required>
+
+      <label><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="firstname" required value="<?php if(isset($firstname)) { echo $firstname; } ?>">
+
+      <label><b>Last Name</b></label>
+      <input type="text" placeholder="Last name" name="surname" required value="<?php if(isset($surname)) { echo $surname; } ?>">
+
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtnSignUp">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!-- end of sign up-->
 
 <!--Start of Hover offer div class  -->
 <div id="mySideHovernav" class="sidenav">
