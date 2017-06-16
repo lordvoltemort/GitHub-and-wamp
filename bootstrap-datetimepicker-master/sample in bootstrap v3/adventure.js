@@ -1,3 +1,4 @@
+//function used to display image while cilcking a butoon(places you can visit)
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
 }

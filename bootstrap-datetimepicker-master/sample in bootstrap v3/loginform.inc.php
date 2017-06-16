@@ -37,6 +37,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
 
 <html lang="en" class="no-js">
 <head>
+<script type="text/javascript" src = "scriptFile.js"></script>
 <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -255,6 +256,8 @@ window.onclick = function(event) {
 
 <!--End of loginform -->
 
+
+
 <!-- Here image will display automatically one by one-->
 <div>
 	<img id="imgBanner" src="" alt="" />
@@ -291,6 +294,10 @@ window.onclick = function(event) {
         </form>
     </div>
 </div>  
+
+	
+?>
+
 <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>

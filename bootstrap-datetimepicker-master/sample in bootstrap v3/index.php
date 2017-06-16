@@ -8,13 +8,13 @@
 require 'core.inc.php';
 require 'connect.inc.php';
 if(loggedin())
-{
+{   
 	$firstname = getuserfield('username');
 	$surname = getuserfield('surname');
 	echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/>';
 	echo '<a href="logout.php"><button>Logout</button></a>';
 //     header("Location: BookingPage.php");
-
+/*
     echo "<div>";
             echo '<img id="imgBanner" src="" alt="" />';
     echo "</div>";
@@ -53,7 +53,7 @@ echo '</div>';
     
 echo "<!-- End of date and time-->";
 
-
+*/
     
 }
 else
@@ -61,7 +61,7 @@ else
 	include 'loginform.inc.php';
 }	
 ?>
-
+<!--
 	<div  id="offers">
 	<form action="Homepage.php" method="post">
 		<p style="float: right; margin-top: 1px;"> <?php //echo "$firstname  $surname" ?></p>
@@ -121,3 +121,4 @@ else
         forceParse: 0
     });
 </script>
+-->

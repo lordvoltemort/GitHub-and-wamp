@@ -1,46 +1,26 @@
 <html>
 <body>
-<script >
-/***************************************************************************************************************
- * Here first of get the image if from displayImageWithButton function and store the value of that particular 
- * image id in a javascript variable and call another function which is update the bikes table with the following 
- * data (userid,bikeid, startdate and enddate)
- **************************************************************************************************************/
-	function myFunction(intvalue) {
-		var xhttp;
-		var val = intvalue;
-		console.log("val is : " ,intvalue);
-		
-		
-		
-		 if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","http://localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/getuser.php?q="+intvalue,true);
-        xmlhttp.send();
-		
-}
-</script>
+
+<script type="text/javascript" src = "scriptFile.js"></script>
 
 <div id="txtHint"><b>user info will be listed here...</b></div>
+<div id="dateHint"></div>
 </body>
 </html>
 
 <?php
 	require 'core.inc.php';
 	require 'connect.inc.php';
-	$userid = getuserfield('user_id');	
+	$startdate = $_REQUEST['Start_trip'];
+	$enddate = $_REQUEST['end_trip'];
+	$resultstart = DateTime::createFromFormat('d M Y  h:i A', $startdate);
+	$start = $resultstart->format('Y-m-d H:i:s');
+	$resultend = DateTime::createFromFormat('d M Y - h:i A', $enddate);
+	$end = $resultend->format('Y-m-d H:i:s');
+	$_SESSION["sdate"] = $start;
+	$_SESSION["edate"] = $end ;
 
-	//$enddate = "$startdate"
+//	$enddate = "$startdate"
 //	$enddate="14 September 2017  09:30 am";
 //	$result = DateTime::createFromFormat('d M Y - h:i A', $startdate);
 //	echo $result->format('Y-m-d H:i:s');
@@ -59,7 +39,7 @@
  ****************************************************************************************************************/
 	if(loggedin())
 	{
-			
+		$userid = getuserfield('user_id');		
 		$GLOBALS['firstname'] = getuserfield('username');
 		$GLOBALS['surname'] = getuserfield('surname');
 		echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/> userid is '. $userid;
@@ -80,6 +60,15 @@
 		function displayImageWithButton() {
 		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");
 		mysqli_select_db($con,"testing");
+
+		$startdate = $_REQUEST['Start_trip'];
+		$enddate = $_REQUEST['end_trip'];
+//		$startdate =  "16 September 2017 05:25 am";
+		$resultstart = DateTime::createFromFormat('d M Y  h:i A', $startdate);
+		
+		$resultend = DateTime::createFromFormat('d M Y - h:i A', $enddate);
+		
+
 		$qry = "SELECT bikes.user_id , images.image , images.image_id FROM `bikes` INNER JOIN images ON bikes.image_id = images.image_id AND bikes.user_id IS NULL ;";
 			$result = mysqli_query($con,$qry);
 			while ($row = mysqli_fetch_array($result)) {
@@ -88,12 +77,11 @@
 			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row['image']. ' "  >';
 			@$GLOBALS['image_id'] = $row['image_id'];
 			@$s = $s +'id = ' + $row['image_id'] +' >';
-	//			echo $s;
-			//@$items[$i] = $row['image_id'];
-			echo '<br> <input type ="button" name = "getId" value = "Click to book" onclick = " myFunction(' . $s . ')">  ';
+			$start = $resultstart->format('Y-m-d H:i:s');	
+			$end = $resultend->format('Y-m-d H:i:s');
+			echo '<br> <input type ="button" name = "getId" value = "Click to book" onclick = " passImageId(
+			\''.str_replace("'", "\\'", $s).'\', \''.str_replace("'", "\\'", $start).'\',\''.str_replace("'", "\\'", $end).'\')">  ';
 			echo "</form>";
-			//@$i++;
-			//displayImageId($image_id);
 		}
 		mysqli_close($con);
 		
@@ -121,7 +109,6 @@
 /***************************************************************************************************************
  * this function is used to update the bikes table when user is valid and book a bike 
 ****************************************************************************************************************/
-echo "User id of that person is : ".$userid;
 	function functionName($x,$startdate,$enddate,$user_id )
 	{	
 		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");

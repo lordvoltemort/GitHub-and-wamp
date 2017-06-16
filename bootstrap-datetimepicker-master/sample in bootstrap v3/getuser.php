@@ -18,13 +18,24 @@ th {text-align: left;}
 <body>
 
 <?php
+require 'core.inc.php';
+$q = $_GET['q'];
+//echo "<br>image id is : ". $q ."<br> and startdate is : ". $startdate . "<br> enddate is : " .$enddate;
 
-$q = intval($_GET['q']);
-//echo "q value is : ".$q;
+$start = $_SESSION["sdate"];
+$end = $_SESSION["edate"];
+$user_id = $_SESSION['user_id'];
+$sql = " UPDATE bikes SET user_id = '$user_id' ,start_date = '$start',end_date='$end'  WHERE bike_id= '$q' ";
 $con = mysqli_connect('localhost','Rahul','Koqa313*@3');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
+if(loggedin())
+{
+    $firstname = getuserfield('username');
+    $surname = getuserfield('surname');
+    echo 'You\'re logged in, '.$firstname.' '.$surname.'.<br/>';
+}    
 
 mysqli_select_db($con,"testing");
 $sql="SELECT * FROM bikes WHERE image_id = '".$q."'";
@@ -51,4 +62,4 @@ echo "</table>";
 mysqli_close($con);
 ?>
 </body>
-</html>
+</html> 
