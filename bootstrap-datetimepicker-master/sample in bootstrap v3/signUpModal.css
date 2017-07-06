@@ -85,3 +85,8 @@ button {
        width: 100%;
     }
 }
+
+/*css for date and time */
+.DateAndTimeCssStyle {
+    background-color:grey;
+}

@@ -10,16 +10,16 @@ function functionCall() {
 	function passImageId(intvalue,startdate,enddate) {
 		var xhttp;
 		var val = intvalue;
-    // var sdate = startdate;
-    // var edate = enddate;
-		// console.log("val is : " ,intvalue);
-    // console.log("start date is : " ,startdate);
-    // console.log("end date is : " ,enddate);
-    // var dataObj = new Object();
-    // dataObj.imageid = val;
-    // dataObj.fdate = sdate;
-    // dataObj.ldate = edate;
-    // console.log("selected data is : ",dataObj);
+    var sdate = startdate;
+    var edate = enddate;
+		console.log("val is : " ,intvalue);
+    console.log("start date is : " ,startdate);
+    console.log("end date is : " ,enddate);
+    var dataObj = new Object();
+    dataObj.imageid = val;
+    dataObj.fdate = sdate;
+    dataObj.ldate = edate;
+    console.log("selected data is : ",dataObj);
 
 		if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -34,7 +34,7 @@ function functionCall() {
             }
         };//$url = "http://localhost/main.php?email=" . $email_address . "&eventid=" . $event_id;
         xmlhttp.open("GET"
-        ,"http://localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/getuser.php?q="+ intvalue
+        ,"http://localhost/GITHUB/GitHub-and-wamp/bootstrap-datetimepicker-master/sample in bootstrap v3/getuser.php?q="+ intvalue + "&startdate = " + startdate + " enddate = " + enddate
         ,true);
         xmlhttp.send();
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		/* The side navigation menu */
+		.sidenavAdventureButton {
+		    height: 100%; /* 100% Full-height */
+		    width: 0; /* 0 width - change this with JavaScript */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Stay on top */
+		    top: 0;
+		    left: 0;
+		    background-color: #111; /* Black*/
+		    overflow-x: hidden; /* Disable horizontal scroll */
+		    padding-top: 60px; /* Place content 60px from the top */
+		    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+		}
+
+		/* The navigation menu links */
+		.sidenavAdventureButton a {
+		    padding: 8px 8px 8px 32px;
+		    text-decoration: none;
+		    font-size: 25px;
+		    color: #818181;
+		    display: block;
+		    transition: 0.3s
+		}
+
+		/* When you mouse over the navigation links, change their color */
+		.sidenavAdventureButton a:hover, .offcanvas a:focus{
+		    color: #f1f1f1;
+		}
+
+		/* Position and style the close button (top right corner) */
+		.closeAdventure {
+		    position: absolute;
+		    top: 0;
+		    right: 25px;
+		    font-size: 36px !important;
+		    margin-left: 50px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		    .sidenavAdventureButton {padding-top: 15px;}
+		    .sidenavAdventureButton a {font-size: 18px;}
+		}
+		#left_Adventure{
+			float: left;
+			width: 10%;
+		}
+		#right_Adventure{
+			float: left;
+			margin-left: 10px;
+			width: 80%;
+			
+		}
+	</style>	
+	<script type="text/javascript">
+		/* Open the sidenav */
+		function openAdventureSlide() {
+		    document.getElementById("mySidenavAdventureButton").style.width = "100%";
+		}
+
+		/* Close/hide the sidenav */
+		function closeAdventure() {
+		    document.getElementById("mySidenavAdventureButton").style.width = "0";
+		}
+	</script>
+</head>
+<body>
+	<div id="mySidenavAdventureButton" class="sidenavAdventureButton">
+	  <a href="javascript:void(0)" class="closeAdventure" onclick="closeAdventure()">&times;</a>
+		  <div id="left_Adventure">
+		  	  <a href="#">About</a>
+			  <a href="#">Services</a>
+			  <a href="#">Clients</a>
+			  <a href="#">Contact</a>	
+		  </div>
+		  <div id="right_Adventure">
+		  	
+		  </div>
+		  
+	</div>
+
+	<!-- Use any element to open the sidenav -->
+	<span onclick="openAdventureSlide()">open</span>
+
+	
+</body>
+</html>

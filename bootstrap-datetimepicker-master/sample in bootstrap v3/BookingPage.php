@@ -20,14 +20,6 @@
 	$_SESSION["sdate"] = $start;
 	$_SESSION["edate"] = $end ;
 
-//	$enddate = "$startdate"
-//	$enddate="14 September 2017  09:30 am";
-//	$result = DateTime::createFromFormat('d M Y - h:i A', $startdate);
-//	echo $result->format('Y-m-d H:i:s');
-//	$s = "14 September 2017  09:30 am";
-//	$enddate="20/04/2017 12:30 AM";
-//	$date = strtotime($s);
-//	echo date('Y-m-d:H:i:s', $date);
 
 /**************************************************************************************************************** 
  *                                                                                                              * 
@@ -98,10 +90,7 @@
 			echo '<img height ="300" width ="300" src="data:image/jpg;base64,' .$row['image']. ' "  >';
 			@$GLOBALS['image_id'] = $row['image_id'];
 			@$s = $s +'id = ' + $row['image_id'] +' >';
-			//@$items[$i] = $row['image_id'];
 			echo "</form>";
-			//@$i++;
-			//displayImageId($image_id);
 		}
 		mysqli_close($con);
 	}
@@ -109,6 +98,7 @@
 /***************************************************************************************************************
  * this function is used to update the bikes table when user is valid and book a bike 
 ****************************************************************************************************************/
+/*	
 	function functionName($x,$startdate,$enddate,$user_id )
 	{	
 		$con=mysqli_connect("localhost","Rahul","Koqa313*@3");
@@ -124,4 +114,5 @@
 		echo $sql = " UPDATE bikes SET user_id = '$user_id' ,start_date = '$start',end_date='$end'  WHERE bike_id= '$x' ";
 		
 	}
+*/	
 ?>

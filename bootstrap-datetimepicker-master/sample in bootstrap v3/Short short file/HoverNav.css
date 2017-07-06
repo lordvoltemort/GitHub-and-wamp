@@ -1,4 +1,4 @@
-#mySidenav a{
+#mySideOffernav a{
 	position: fixed;
 	right:   -110px;
 	padding: 15px;
@@ -10,28 +10,28 @@
 	border-radius: 5px 0 0 5px;
 }
 
-#mySidenav a:hover{
+#mySideOffernav a:hover{
 	right: 0px;
 
 }
 
-#about {
+#aboutOffer {
     top: 440px;
     background-color: #4CAF50;
 }	
 
-#blog {
+#blogOffer {
     top: 380px;
     background-color: #2196F3; 
 }
 
 
-#projects {
+#projectsOffer {
     top: 320px;
     background-color: #f44336; 
 }
 
-#contact {
+#contactOffer {
     top: 260px;
     background-color: #555 
 }

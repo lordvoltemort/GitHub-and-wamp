@@ -132,27 +132,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-<!--
-
-    echo '<div class="navbar-header-">';
-      echo '<div class="navbar-header-container">';
-        echo '<a href="#" style="display: inline-block; color: white;">Home</a>';
-        echo '<a href="#" style="display: inline-block; color: white;">Contact us</a>';
-        echo '<a href="#" style="display: inline-block; color: white;">About</a>';
-        echo '<a href="#" style="display: inline-block; color: white;">Feedback</a>';
-        echo '<a href="#" style="display: inline-block; color: white;">Refer_and_earn</a>';
-        echo '<a href="register.php" style="display: inline-block; color: white;" >SignUp</a>';
-
-        echo '<button onclick="document.getElementById("id01").style.display="block" " class="w3-button w3-black w3-large" style="float:right">Login</button>';
-        echo '</div>';
-  echo '</div>';
-  
-
--->
-
-
-
 <!-- Header file start here -->
     <div class="navbar-header-">
       <div class="navbar-header-container">
@@ -256,8 +235,6 @@ window.onclick = function(event) {
 
 <!--End of loginform -->
 
-
-
 <!-- Here image will display automatically one by one-->
 <div>
 	<img id="imgBanner" src="" alt="" />
@@ -266,7 +243,7 @@ window.onclick = function(event) {
 
 <div >
 <!-- Start of date and time box-->
-<div class="DateAndTime">
+<div class="DateAndTimeCssStyle">
     <div class="container">
         <form onsubmit="return checkDate()" method="get" action="BookingPage.php" class="form-horizontal"  role="form">
             
@@ -290,14 +267,11 @@ window.onclick = function(event) {
                     <input type="hidden" id="dtp_input1" value="" /><br/>
                 </div>
                 <input type="submit" value="search" >
-            
         </form>
     </div>
 </div>  
 
 	
-?>
-
 <script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
@@ -562,6 +536,7 @@ window.onclick = function(event) {
 	            </li>
 	        </ul> <!-- cd-faq-group -->
 	    </div> <!-- cd-faq-items -->
+        
 	    <a href="#0" class="cd-close-panel">Close</a>
 	</section> <!-- cd-faq -->
 	<script src="js/jquery-2.1.1.js"></script>
